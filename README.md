@@ -4,8 +4,9 @@ The `jSilvestri2024WebApiDemoCollection` application (i.e., _jSilvestri.com BETA
 
 This solution showcases a collection of projects demonstrating the integration of different frontend frameworks Jason is performing Discovery with (i.e., Angular, Vue, React, and Blazor) with a .NET Core Web API backend.
 
- **⚠ Important:** 
-  This application is still In-Work and currently in Phase 1 of Development (e.g., _Basic MVP example_). Conversely, Phase 2 and beyond will have most (if not all) functionality fully integrated. Stay tuned!
+ **⚠ Important ⚠** 
+
+This application is still considered _**In-Work**_. We are only in Phase 1 of Development (e.g., _Basic MVP example_). Conversely, Phase 2 and beyond will have most (if not all) functionality fully integrated. Stay tuned!
 
 ## Overview
 
@@ -15,19 +16,19 @@ The `jSilvestri2024WebApiDemoCollection` application (i.e., _jSilvestri.com BETA
 
 This solution showcases a collection of projects demonstrating the integration of different frontend frameworks Jason is performing Discovery with (i.e., Angular, Vue, React, and Blazor) with a .NET Core Web API backend. Moreover, this solution contains multiple projects demonstrating the usage of Web API, JWT authentication, and various front-end frameworks for user authentication.
 
-## Solution Structure
+## VS Project & Solution Structure
 
 **The solution includes the following projects:**
 
-- **jSilvestri2024WebApiDemoCollection**: The main `jSilvestri2024WebApiDemoCollection` solution. This soluton includes all projects described below, but doesn't have any major function outside of that. In fact, all projects below were designed to also have their own, independent repositories, which can also be independently downloaded and/or run (respectfully).
+- **[Official jSilvestri 2024 Web API Demo Collection Project](https://github.com/JasonSilvestri/jSilvestri2024WebApiDemoCollection)**: The main `jSilvestri2024WebApiDemoCollection` solution. This soluton includes all projects described below, but doesn't have any major function outside having a place where all projects can be consumed at once. In fact, all projects below were also designed to have their own, independent repositories, which can be downloaded and/or run alone (respectfully).
 
 **The Shared Projects:**
 
 The following Projects are used to share common resources and information across all other projects.
 
-1. **[Jsx Web API](https://github.com/JasonSilvestri/JsxWebApi)**: The `JsxWebAPI` Project, is an ASP.NET Core Web API project with JWT authentication and generic CRUD operations.
-2. **[Jsx Class Library](https://github.com/JasonSilvestri/JsxClassLibrary)**: The `JsxClassLibrary` class library, is a shared library, containing constants, DTOs, and helper classes. 
-3. **[Jsx Shared Resources](https://github.com/JasonSilvestri/JsxSharedResources)**: The `JsxSharedResources` shared recources library, containing common HTML, CSS, JS, Images and other reuseable theming objects.
+1. **[Jsx Web API Project](https://github.com/JasonSilvestri/JsxWebApi)**: The `JsxWebAPI` Project, is an ASP.NET Core Web API project with JWT authentication and generic CRUD operations.
+2. **[Jsx Class Library Project](https://github.com/JasonSilvestri/JsxClassLibrary)**: The `JsxClassLibrary` class library, is a shared library, containing constants, DTOs, and helper classes. 
+3. **[Jsx Shared Resources Project](https://github.com/JasonSilvestri/JsxSharedResources)**: The `JsxSharedResources` shared recources library, containing common HTML, CSS, JS, Images and other reuseable theming objects.
 
 **The Web API Demo Projects:**
 
