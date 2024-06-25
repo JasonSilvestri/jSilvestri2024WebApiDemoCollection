@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jsxvuecorewebapidemo.client
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsxBlazorServerCoreWebApiDemo", "..\JsxBlazorServerCoreWebApiDemo\JsxBlazorServerCoreWebApiDemo.csproj", "{4250FF62-AD29-4127-B784-EF5CE4DAFA7C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jSilvestri2024WebApiDemoCollection", "jSilvestri2024WebApiDemoCollection\jSilvestri2024WebApiDemoCollection.csproj", "{2D6A823C-35D6-43C5-A902-F08125529C3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsxSharedResources", "..\JsxSharedResources\JsxSharedResources.csproj", "{57B8F7A3-EE27-4F65-A85A-3FE6E1235DBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jSilvestri2024WebApiDemoCollection", "jSilvestri2024WebApiDemoCollection.csproj", "{FFB78B20-D7EE-4E96-A338-34E7657CAF36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +73,14 @@ Global
 		{4250FF62-AD29-4127-B784-EF5CE4DAFA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4250FF62-AD29-4127-B784-EF5CE4DAFA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4250FF62-AD29-4127-B784-EF5CE4DAFA7C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D6A823C-35D6-43C5-A902-F08125529C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D6A823C-35D6-43C5-A902-F08125529C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D6A823C-35D6-43C5-A902-F08125529C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D6A823C-35D6-43C5-A902-F08125529C3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57B8F7A3-EE27-4F65-A85A-3FE6E1235DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57B8F7A3-EE27-4F65-A85A-3FE6E1235DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57B8F7A3-EE27-4F65-A85A-3FE6E1235DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57B8F7A3-EE27-4F65-A85A-3FE6E1235DBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFB78B20-D7EE-4E96-A338-34E7657CAF36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFB78B20-D7EE-4E96-A338-34E7657CAF36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFB78B20-D7EE-4E96-A338-34E7657CAF36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFB78B20-D7EE-4E96-A338-34E7657CAF36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

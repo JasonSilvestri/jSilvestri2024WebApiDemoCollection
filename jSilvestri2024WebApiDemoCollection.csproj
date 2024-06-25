@@ -4,47 +4,25 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-jSilvestri2024WebApiDemoCollection-9221bff3-d60a-4f2d-b396-6222386837bb</UserSecretsId>
+    <UserSecretsId>aspnet-jSilvestri2024WebApiDemoCollection-33217283-d9b5-408b-b6da-4216f59d673e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="JsxAngularCoreWebApiDemo\**" />
-    <Compile Remove="JsxBlazorServerCoreWebApiDemo\**" />
-    <Compile Remove="JsxReactCoreWebApiDemo\**" />
-    <Compile Remove="JsxVueCoreWebApiDemo\**" />
-    <Content Remove="JsxAngularCoreWebApiDemo\**" />
-    <Content Remove="JsxBlazorServerCoreWebApiDemo\**" />
-    <Content Remove="JsxReactCoreWebApiDemo\**" />
-    <Content Remove="JsxVueCoreWebApiDemo\**" />
-    <EmbeddedResource Remove="JsxAngularCoreWebApiDemo\**" />
-    <EmbeddedResource Remove="JsxBlazorServerCoreWebApiDemo\**" />
-    <EmbeddedResource Remove="JsxReactCoreWebApiDemo\**" />
-    <EmbeddedResource Remove="JsxVueCoreWebApiDemo\**" />
-    <None Remove="JsxAngularCoreWebApiDemo\**" />
-    <None Remove="JsxBlazorServerCoreWebApiDemo\**" />
-    <None Remove="JsxReactCoreWebApiDemo\**" />
-    <None Remove="JsxVueCoreWebApiDemo\**" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5" />
   </ItemGroup>
-
+  
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\JsxAngularCoreWebApiDemo\jsxangularcorewebapidemo.client\jsxangularcorewebapidemo.client.esproj" />
-    <ProjectReference Include="..\JsxAngularCoreWebApiDemo\JsxAngularCoreWebApiDemo.Server\JsxAngularCoreWebApiDemo.Server.csproj" />
-    <ProjectReference Include="..\JsxBlazorServerCoreWebApiDemo\JsxBlazorServerCoreWebApiDemo.csproj" />
     <ProjectReference Include="..\JsxClassLibrary\JsxClassLibrary.csproj" />
-    <ProjectReference Include="..\JsxReactCoreWebApiDemo\jsxreactcorewebapidemo.client\jsxreactcorewebapidemo.client.esproj" />
-    <ProjectReference Include="..\JsxReactCoreWebApiDemo\JsxReactCoreWebApiDemo.Server\JsxReactCoreWebApiDemo.Server.csproj" />
+    <ProjectReference Include="..\JsxWebAPI\JsxWebAPI.csproj" />
     <ProjectReference Include="..\JsxSharedResources\JsxSharedResources.csproj" />
-    <ProjectReference Include="..\JsxVueCoreWebApiDemo\jsxvuecorewebapidemo.client\jsxvuecorewebapidemo.client.esproj" />
+    <ProjectReference Include="..\JsxAngularCoreWebApiDemo\JsxAngularCoreWebApiDemo.Server\JsxAngularCoreWebApiDemo.Server.csproj" />
+    <ProjectReference Include="..\JsxReactCoreWebApiDemo\JsxReactCoreWebApiDemo.Server\JsxReactCoreWebApiDemo.Server.csproj" />
     <ProjectReference Include="..\JsxVueCoreWebApiDemo\JsxVueCoreWebApiDemo.Server\JsxVueCoreWebApiDemo.Server.csproj" />
-    <ProjectReference Include="..\JsxWebApi\JsxWebApi.csproj" />
+    <ProjectReference Include="..\JsxBlazorServerCoreWebApiDemo\JsxBlazorServerCoreWebApiDemo.csproj" /> 
   </ItemGroup>
 
 </Project>
