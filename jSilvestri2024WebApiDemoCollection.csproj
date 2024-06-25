@@ -34,4 +34,17 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\JsxAngularCoreWebApiDemo\jsxangularcorewebapidemo.client\jsxangularcorewebapidemo.client.esproj" />
+    <ProjectReference Include="..\JsxAngularCoreWebApiDemo\JsxAngularCoreWebApiDemo.Server\JsxAngularCoreWebApiDemo.Server.csproj" />
+    <ProjectReference Include="..\JsxBlazorServerCoreWebApiDemo\JsxBlazorServerCoreWebApiDemo.csproj" />
+    <ProjectReference Include="..\JsxClassLibrary\JsxClassLibrary.csproj" />
+    <ProjectReference Include="..\JsxReactCoreWebApiDemo\jsxreactcorewebapidemo.client\jsxreactcorewebapidemo.client.esproj" />
+    <ProjectReference Include="..\JsxReactCoreWebApiDemo\JsxReactCoreWebApiDemo.Server\JsxReactCoreWebApiDemo.Server.csproj" />
+    <ProjectReference Include="..\JsxSharedResources\JsxSharedResources.csproj" />
+    <ProjectReference Include="..\JsxVueCoreWebApiDemo\jsxvuecorewebapidemo.client\jsxvuecorewebapidemo.client.esproj" />
+    <ProjectReference Include="..\JsxVueCoreWebApiDemo\JsxVueCoreWebApiDemo.Server\JsxVueCoreWebApiDemo.Server.csproj" />
+    <ProjectReference Include="..\JsxWebApi\JsxWebApi.csproj" />
+  </ItemGroup>
+
 </Project>
