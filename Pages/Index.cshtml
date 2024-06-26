@@ -1,10 +1,60 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = @JsxConstants.JsxWebApiDemoProducts.ProductNames.JsxMainProjectName + "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Welcome to @JsxConstants.JsxWebApiDemoProducts.ProductNames.JsxMainProjectName</h1>
+    <div class="row">
+        <div class="d-flex gap-4 flex-wrap fs-1 mt-4 mb-5">
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-boombox text-primary"></i></div>
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-twitter text-info"></i></div>
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-emoji-laughing text-warning"></i></div>
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-inboxes-fill text-success"></i></div>
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-balloon-fill text-danger"></i></div>
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-cup-hot-fill text-muted"></i></div>
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-device-ssd-fill"></i></div>
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-easel2-fill"></i></div>
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-filetype-doc"></i></div>
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-car-front-fill"></i></div>
+            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-person-circle"></i></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-bootstrap"></i> JsxAngularCoreWebApiDemo</h5>
+                    <p class="card-text">An Angular-based demo integrating with ASP.NET Core Web API.</p>
+                    <a href="https://github.com/JasonSilvestri/JsxAngularCoreWebApiDemo.git" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-react"></i> JsxReactCoreWebApiDemo</h5>
+                    <p class="card-text">A React-based demo integrating with ASP.NET Core Web API.</p>
+                    <a href="https://github.com/JasonSilvestri/JsxReactCoreWebApiDemo.git" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-vue"></i> JsxVueCoreWebApiDemo</h5>
+                    <p class="card-text">A Vue.js-based demo integrating with ASP.NET Core Web API.</p>
+                    <a href="https://github.com/JasonSilvestri/JsxVueCoreWebApiDemo.git" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="bi bi-lightning"></i> JsxBlazorCoreWebApiDemo</h5>
+                    <p class="card-text">A Blazor-based demo integrating with ASP.NET Core Web API.</p>
+                    <a href="https://github.com/JasonSilvestri/JsxBlazorCoreWebApiDemo.git" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
