@@ -1,58 +1,84 @@
 ﻿@page
+@using JsxClassLibrary
 @model IndexModel
 @{
-    ViewData["Title"] = @JsxConstants.JsxWebApiDemoProducts.ProductNames.JsxMainProjectName + "Home page";
+    ViewData["Title"] = @JsxConstants.JsxWebApiDemoProducts.ProductNames.Default.JsxMainProjectName + "Home page";
 }
 
 <div class="container mt-5">
-    <h1 class="text-center mb-4">Welcome to @JsxConstants.JsxWebApiDemoProducts.ProductNames.JsxMainProjectName</h1>
+    <h1 class="text-center mb-4">Welcome to @JsxConstants.JsxWebApiDemoProducts.ProductNames.Default.JsxMainProjectName</h1>
     <div class="row">
-        <div class="d-flex gap-4 flex-wrap fs-1 mt-4 mb-5">
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-boombox text-primary"></i></div>
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-twitter text-info"></i></div>
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-emoji-laughing text-warning"></i></div>
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-inboxes-fill text-success"></i></div>
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-balloon-fill text-danger"></i></div>
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-cup-hot-fill text-muted"></i></div>
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-device-ssd-fill"></i></div>
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-easel2-fill"></i></div>
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-filetype-doc"></i></div>
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-car-front-fill"></i></div>
-            <div class="px-4 py-3 bg-light rounded-2"><i class="bi bi-person-circle"></i></div>
-        </div>
         <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card h-100">
                 <div class="card-body">
-                    <h5 class="card-title"><i class="bi bi-bootstrap"></i> JsxAngularCoreWebApiDemo</h5>
-                    <p class="card-text">An Angular-based demo integrating with ASP.NET Core Web API.</p>
-                    <a href="https://github.com/JasonSilvestri/JsxAngularCoreWebApiDemo.git" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                    <h5 class="card-title">@* <i class="fa fa-user"></i> *@ @JsxConstants.JsxWebApiDemoProducts.ProductNames.Shorts.JsxClassLibraryProject</h5>
+                    <p class="card-text">@JsxConstants.JsxWebApiDemoProducts.Descriptions.Short.JsxClassLibrary</p>
+                    <a href="@JsxConstants.JsxWebApiDemoProducts.GitHubUrls.DotGitUrls.JsxClassLibraryProject" class="btn btn-primary" target="_blank">GitHub Repository</a>
                 </div>
             </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card h-100">
                 <div class="card-body">
-                    <h5 class="card-title"><i class="bi bi-react"></i> JsxReactCoreWebApiDemo</h5>
-                    <p class="card-text">A React-based demo integrating with ASP.NET Core Web API.</p>
-                    <a href="https://github.com/JasonSilvestri/JsxReactCoreWebApiDemo.git" class="btn btn-primary" target="_blank">GitHub Repository</a>
-                </div>
+                <h5 class="card-title">@JsxConstants.JsxWebApiDemoProducts.ProductNames.Shorts.JsxSharedResourcesProject</h5>
+                    <p class="card-text">@JsxConstants.JsxWebApiDemoProducts.Descriptions.Short.JsxSharedResources</p>
+                    <a href="@JsxConstants.JsxWebApiDemoProducts.GitHubUrls.DotGitUrls.JsxSharedResourcesProject" class="btn btn-primary" target="_blank">GitHub Repository</a>
             </div>
         </div>
+    </div>
         <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card h-100">
                 <div class="card-body">
-                    <h5 class="card-title"><i class="bi bi-vue"></i> JsxVueCoreWebApiDemo</h5>
-                    <p class="card-text">A Vue.js-based demo integrating with ASP.NET Core Web API.</p>
-                    <a href="https://github.com/JasonSilvestri/JsxVueCoreWebApiDemo.git" class="btn btn-primary" target="_blank">GitHub Repository</a>
-                </div>
+                <h5 class="card-title">@JsxConstants.JsxWebApiDemoProducts.ProductNames.Shorts.JsxWebApiProject</h5>
+                    <p class="card-text">@JsxConstants.JsxWebApiDemoProducts.Descriptions.Short.JsxWebApiProject</p>
+                    <a href="@JsxConstants.JsxWebApiDemoProducts.GitHubUrls.DotGitUrls.JsxWebApiProject" class="btn btn-primary" target="_blank">GitHub Repository</a>
             </div>
+        </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4 mb-4">
             <div class="card h-100">
+               <div class="card-body">
+                <h5 class="card-title">@JsxConstants.JsxWebApiDemoProducts.ProductNames.Shorts.JsxBlazorProject</h5>
+                <p class="card-text">@JsxConstants.JsxWebApiDemoProducts.Descriptions.Short.JsxBlazorProject</p>
+                <a href="@JsxConstants.JsxWebApiDemoProducts.GitHubUrls.DotGitUrls.JsxBlazorProject" class="btn btn-primary" target="_blank">GitHub Repository</a>
+            </div>
+        </div>
+     </div>
+</div>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card h-100">
                 <div class="card-body">
-                    <h5 class="card-title"><i class="bi bi-lightning"></i> JsxBlazorCoreWebApiDemo</h5>
-                    <p class="card-text">A Blazor-based demo integrating with ASP.NET Core Web API.</p>
-                    <a href="https://github.com/JasonSilvestri/JsxBlazorCoreWebApiDemo.git" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                    <h5 class="card-title">@* <i class="fa fa-user"></i> *@ @JsxConstants.JsxWebApiDemoProducts.ProductNames.Shorts.JsxAngularJsProject</h5>
+                    <p class="card-text">@JsxConstants.JsxWebApiDemoProducts.Descriptions.Short.JsxAngularJsProject</p>
+                    <a href="@JsxConstants.JsxWebApiDemoProducts.GitHubUrls.DotGitUrls.JsxAngularJsProject" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">@JsxConstants.JsxWebApiDemoProducts.ProductNames.Shorts.JsxReactJsProject</h5>
+                    <p class="card-text">@JsxConstants.JsxWebApiDemoProducts.Descriptions.Short.JsxReactJsProject</p>
+                    <a href="@JsxConstants.JsxWebApiDemoProducts.GitHubUrls.DotGitUrls.JsxReactJsProject" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">@JsxConstants.JsxWebApiDemoProducts.ProductNames.Shorts.JsxVueProject</h5>
+                    <p class="card-text">@JsxConstants.JsxWebApiDemoProducts.Descriptions.Short.JsxVueProject</p>
+                    <a href="@JsxConstants.JsxWebApiDemoProducts.GitHubUrls.DotGitUrls.JsxVueProject" class="btn btn-primary" target="_blank">GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">@JsxConstants.JsxWebApiDemoProducts.ProductNames.Shorts.JsxBlazorProject</h5>
+                    <p class="card-text">@JsxConstants.JsxWebApiDemoProducts.Descriptions.Short.JsxBlazorProject</p>
+                    <a href="@JsxConstants.JsxWebApiDemoProducts.GitHubUrls.DotGitUrls.JsxBlazorProject" class="btn btn-primary" target="_blank">GitHub Repository</a>
                 </div>
             </div>
         </div>

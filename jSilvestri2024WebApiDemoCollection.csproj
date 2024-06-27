@@ -5,43 +5,56 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>aspnet-jSilvestri2024WebApiDemoCollection-33217283-d9b5-408b-b6da-4216f59d673e</UserSecretsId>
-    <Title>Official jSilvestri.com BETA v 2024 Web API Demo Collection: Phase 1</Title>
-    <Version>2024.0.0.001</Version>
+   <Version>2024.0.0.001</Version>
+    <Title>Jsx Web API Project: Phase 1</Title>
     <Authors>Jason Silvestri</Authors>
     <Company>jSilvestri.com</Company>
-    <Product>The jSilvestri.com BETA v 2024 Web API Demo Collection Project</Product>
+    <Product>Official jSilvestri.com BETA v 2024 Web API Demo Collection</Product>
     <Description>
-      The jSilvestri.com BETA v 2024  mobile and web applications, developed for most smart phones, tablets and desktop computers, were created to showcase a wide range of skills to potential clients and employers, to support existing clients, while providing helpful information to fellow developers, demos for interview talks, access to resumes, etc.
+      The jSilvestri.com BETA v 2024 mobile and web applications, developed for most smart phones, tablets and desktop computers, were created to showcase a wide range of skills to potential clients and employers, to support existing clients, while providing helpful information to fellow developers, demos for interview talks, access to resumes, etc.
 
-      Conversely, jSilvestri.com BETA v 2024 Web API Demo Collection Project is something very different.
+      The jSilvestri.com 2024 Web API Demo Collection is a comprehensive suite of demonstration projects designed to showcase the integration and usage of various front-end frameworks (Angular, React, Vue, Blazor) with ASP.NET Core 8 Web API. This collection serves as a learning resource and reference for developers looking to understand and implement modern web application architectures using these technologies.
 
-      Currently in Phase 1 of 4, the jSilvestri.com BETA v 2024 Web API Demo Collection, is a collection of client-side and server-side projects created with Asp.NET Core, Angular, Blazor, React, Vue, .NET MAUI and more). Like the other projects, this is a FREE, open-source, AS-IS, custom, reusable application, which demonstrates the re-use of common assets and services across projects, from common HTML, CSS and JS theming to more robust Web APIs services, JWT authentication, and much more!
+      Currently in Phase 1 of 4, this project is one of several projects from the jSilvestri.com BETA v 2024 Web API Demo Collection.
     </Description>
     <Copyright>Copyright © 2024 All Rights Reserved by Jason Silvestri</Copyright>
     <PackageProjectUrl>https://github.com/JasonSilvestri/jSilvestri2024WebApiDemoCollection</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/JasonSilvestri/jSilvestri2024WebApiDemoCollection.git</RepositoryUrl>
     <PackageReleaseNotes>
-      06/26/2024 JSILVESTRI.COM BETA V 2024.0.0.001 Release
+      06/27/2024 JSILVESTRI.COM BETA V 2024.0.0.001 Release
       Current Workflow State: Completed
       Mobile / Web Developer: Jason Silvestri
 
-      Date Reported:    June 12, 2024
-      Date Completed: June 26, 2024
+      Date Reported:    June 26, 2024
+      Date Completed: June 27, 2024
       Build: BETA v 2024.0.0.001
 
       All Notes:
-      This release (2024.0.0.001) marks the first iteration of the custom Official jSilvestri.com BETA v 2024 Web API Demo Collection.
+      This release (2024.0.0.001) marks the first iteration of the Official JSX WebApi from the jSilvestri.com BETA v 2024 Web API Demo Collection.
 
-      * Reverted reference chnages across all applications of the  jSilvestri.com BETA v 2024 Web API Demo Collection.
+      * Reverted reference chnages across all applications of the jSilvestri.com BETA v 2024 Web API Demo Collection.
 
-      * Added new JsxClassLibrary, JsxWebAPI &amp; JsxSharedResources project references to the updated BlazorServer Asp.NET Core 8.0.5 Server-Side Project.
+      * Added new jSilvestri.com 2024 Web API Demo Collection Product and Name constants.
+
+      * Used new jSilvestri.com 2024 Web API Demo Collection JaxClass Lib constant Product Names, Descriptions, GitHub information, etc. to configure static assets
+
+      * Updated jSilvestri.com 2024 Web API Demo Collection release notes and other related items.
 
       ⚠️ IMPORTANT! ⚠️
 
       This is the initial Phase 1 of 4 release of the application. It includes only the essential resources by design, and it will have a release lifecycle of already planned phases and features, also by design.
     </PackageReleaseNotes>
+    <PackageIcon>android-chrome-192x192.png</PackageIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\JsxSharedResources\android-chrome-192x192.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.3.3" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.5" />
@@ -49,12 +62,20 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.5" />
+
   </ItemGroup>
   
   <ItemGroup>
     <ProjectReference Include="..\JsxClassLibrary\JsxClassLibrary.csproj" />
     <ProjectReference Include="..\JsxWebAPI\JsxWebAPI.csproj" />
     <ProjectReference Include="..\JsxSharedResources\JsxSharedResources.csproj" /> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -7,29 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsxClassLibrary", "..\JsxCl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsxSharedResources", "..\JsxSharedResources\JsxSharedResources.csproj", "{8C81E076-7B28-4CE6-8BC8-1D9FFBD95D28}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsxAngularCoreWebApiDemo.Server", "..\JsxAngularCoreWebApiDemo\JsxAngularCoreWebApiDemo.Server\JsxAngularCoreWebApiDemo.Server.csproj", "{55F01B89-68F7-49AE-A596-13ACDD8072AB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jsxangularcorewebapidemo.client", "..\JsxAngularCoreWebApiDemo\jsxangularcorewebapidemo.client\jsxangularcorewebapidemo.client.esproj", "{76CE7D36-9993-4200-8D4E-5713D480A0CE}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsxReactCoreWebApiDemo.Server", "..\JsxReactCoreWebApiDemo\JsxReactCoreWebApiDemo.Server\JsxReactCoreWebApiDemo.Server.csproj", "{B084F1AB-AADC-4036-AC79-5AA27C6D6864}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jsxreactcorewebapidemo.client", "..\JsxReactCoreWebApiDemo\jsxreactcorewebapidemo.client\jsxreactcorewebapidemo.client.esproj", "{7D95AB6D-988B-4F1F-A742-5D46A7809705}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsxVueCoreWebApiDemo.Server", "..\JsxVueCoreWebApiDemo\JsxVueCoreWebApiDemo.Server\JsxVueCoreWebApiDemo.Server.csproj", "{E987A50E-B0EB-4123-8C9A-36D36BA30827}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jsxvuecorewebapidemo.client", "..\JsxVueCoreWebApiDemo\jsxvuecorewebapidemo.client\jsxvuecorewebapidemo.client.esproj", "{1C69DABA-6A3E-4585-81F3-20B47713EDC1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsxBlazorServerCoreWebApiDemo", "..\JsxBlazorServerCoreWebApiDemo\JsxBlazorServerCoreWebApiDemo.csproj", "{4250FF62-AD29-4127-B784-EF5CE4DAFA7C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jSilvestri2024WebApiDemoCollection", "jSilvestri2024WebApiDemoCollection.csproj", "{5955D986-5381-47C4-B7A6-97E43772E366}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4250FF62-AD29-4127-B784-EF5CE4DAFA7C} = {4250FF62-AD29-4127-B784-EF5CE4DAFA7C}
-		{55F01B89-68F7-49AE-A596-13ACDD8072AB} = {55F01B89-68F7-49AE-A596-13ACDD8072AB}
-		{B084F1AB-AADC-4036-AC79-5AA27C6D6864} = {B084F1AB-AADC-4036-AC79-5AA27C6D6864}
-		{E987A50E-B0EB-4123-8C9A-36D36BA30827} = {E987A50E-B0EB-4123-8C9A-36D36BA30827}
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsxWebApi", "..\JsxWebApi\JsxWebApi.csproj", "{5E0B61C1-D416-4765-BAE2-95E8BA0931E5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8C81E076-7B28-4CE6-8BC8-1D9FFBD95D28} = {8C81E076-7B28-4CE6-8BC8-1D9FFBD95D28}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,36 +33,6 @@ Global
 		{8C81E076-7B28-4CE6-8BC8-1D9FFBD95D28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C81E076-7B28-4CE6-8BC8-1D9FFBD95D28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C81E076-7B28-4CE6-8BC8-1D9FFBD95D28}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55F01B89-68F7-49AE-A596-13ACDD8072AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55F01B89-68F7-49AE-A596-13ACDD8072AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55F01B89-68F7-49AE-A596-13ACDD8072AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55F01B89-68F7-49AE-A596-13ACDD8072AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76CE7D36-9993-4200-8D4E-5713D480A0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76CE7D36-9993-4200-8D4E-5713D480A0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76CE7D36-9993-4200-8D4E-5713D480A0CE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{76CE7D36-9993-4200-8D4E-5713D480A0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76CE7D36-9993-4200-8D4E-5713D480A0CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76CE7D36-9993-4200-8D4E-5713D480A0CE}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{B084F1AB-AADC-4036-AC79-5AA27C6D6864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B084F1AB-AADC-4036-AC79-5AA27C6D6864}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B084F1AB-AADC-4036-AC79-5AA27C6D6864}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B084F1AB-AADC-4036-AC79-5AA27C6D6864}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D95AB6D-988B-4F1F-A742-5D46A7809705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D95AB6D-988B-4F1F-A742-5D46A7809705}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D95AB6D-988B-4F1F-A742-5D46A7809705}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{7D95AB6D-988B-4F1F-A742-5D46A7809705}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D95AB6D-988B-4F1F-A742-5D46A7809705}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D95AB6D-988B-4F1F-A742-5D46A7809705}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{E987A50E-B0EB-4123-8C9A-36D36BA30827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E987A50E-B0EB-4123-8C9A-36D36BA30827}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E987A50E-B0EB-4123-8C9A-36D36BA30827}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E987A50E-B0EB-4123-8C9A-36D36BA30827}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C69DABA-6A3E-4585-81F3-20B47713EDC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1C69DABA-6A3E-4585-81F3-20B47713EDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1C69DABA-6A3E-4585-81F3-20B47713EDC1}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{1C69DABA-6A3E-4585-81F3-20B47713EDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1C69DABA-6A3E-4585-81F3-20B47713EDC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1C69DABA-6A3E-4585-81F3-20B47713EDC1}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{4250FF62-AD29-4127-B784-EF5CE4DAFA7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4250FF62-AD29-4127-B784-EF5CE4DAFA7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4250FF62-AD29-4127-B784-EF5CE4DAFA7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
