@@ -360,6 +360,266 @@ While this workflow may change, the steps I am taking to conclude all aspects of
 10. **Continuous Integration and Continuous Deployment (CI/CD)**:
     - Set up CI/CD pipelines to automate the build and deployment process for your solution.
 
+# Option 2: All-in-One Approach for Static Resources
 
+This guide provides an overview of how to create an All-in-One approach to manage and share static resources (HTML, CSS, JS, fonts, images, etc.) across various server-side and client-side projects including ASP.NET Core, Blazor, React, Vue, and Angular.
+
+## 1. Create a Shared Static Resources Project
+
+### Steps
+
+1. **Create a Razor Class Library for Static Resources:**
+
+    **File Structure:**
+    ```
+    /src
+      /MyApp.SharedResources
+        /MyApp.SharedResources.csproj
+        /wwwroot
+          /css
+            /styles.css
+          /js
+            /scripts.js
+          /fonts
+            /my-font.ttf
+          /images
+            /logo.png
+          /index.html
+    ```
+
+2. **Configure the Project File:**
+
+    **`MyApp.SharedResources.csproj`:**
+    ```xml
+    <Project Sdk="Microsoft.NET.Sdk.Razor">
+      <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RazorLangVersion>8.0</RazorLangVersion>
+      </PropertyGroup>
+      <ItemGroup>
+        <Content Include="wwwroot\**\*" CopyToOutputDirectory="PreserveNewest" />
+      </ItemGroup>
+    </Project>
+    ```
+
+## 2. Reference Shared Resources in ASP.NET Core Project
+
+### Steps
+
+1. **Add Project Reference:**
+
+    **File Structure:**
+    ```
+    /src
+      /MyApp.Api
+        /MyApp.Api.csproj
+      /MyApp.SharedResources
+    ```
+
+2. **Configure the Project File:**
+
+    **`MyApp.Api.csproj`:**
+    ```xml
+    <Project Sdk="Microsoft.NET.Sdk.Web">
+      <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+      </PropertyGroup>
+      <ItemGroup>
+        <ProjectReference Include="..\MyApp.SharedResources\MyApp.SharedResources.csproj" />
+      </ItemGroup>
+    </Project>
+    ```
+
+3. **Configure Startup:**
+
+    **`Startup.cs` (or `Program.cs` for minimal hosting model):**
+    ```csharp
+    public class Startup
+    {
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddRazorPages();
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
+            }
+
+            app.UseHttpsRedirection();
+            app.UseStaticFiles();
+
+            // Serve static files from the shared resources
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = new PhysicalFileProvider(
+                    Path.Combine(env.ContentRootPath, "wwwroot")),
+                RequestPath = "/shared"
+            });
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+            });
+        }
+    }
+    ```
+
+## 3. Reference Shared Resources in Client-Side Projects
+
+### React
+
+1. **Create a React Project:**
+
+    ```bash
+    npx create-react-app my-app-react
+    cd my-app-react
+    ```
+
+2. **Fetch Static Files:**
+
+    Modify `public/index.html` to load static resources from the ASP.NET Core backend.
+
+    **`my-app-react/public/index.html`:**
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://localhost:5001/shared/css/styles.css">
+    </head>
+    <body>
+      <div id="root"></div>
+      <script src="https://localhost:5001/shared/js/scripts.js"></script>
+    </body>
+    </html>
+    ```
+
+### Vue
+
+1. **Create a Vue Project:**
+
+    ```bash
+    npm init vue@3 my-app-vue
+    cd my-app-vue
+    ```
+
+2. **Fetch Static Files:**
+
+    Modify `public/index.html` to load static resources from the ASP.NET Core backend.
+
+    **`my-app-vue/public/index.html`:**
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://localhost:5001/shared/css/styles.css">
+    </head>
+    <body>
+      <div id="app"></div>
+      <script src="https://localhost:5001/shared/js/scripts.js"></script>
+    </body>
+    </html>
+    ```
+
+### Angular
+
+1. **Create an Angular Project:**
+
+    ```bash
+    ng new my-app-angular
+    cd my-app-angular
+    ```
+
+2. **Fetch Static Files:**
+
+    Modify `index.html` to load static resources from the ASP.NET Core backend.
+
+    **`my-app-angular/src/index.html`:**
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://localhost:5001/shared/css/styles.css">
+    </head>
+    <body>
+      <app-root></app-root>
+      <script src="https://localhost:5001/shared/js/scripts.js"></script>
+    </body>
+    </html>
+    ```
+
+3. **Configure HTTP Client Module:**
+
+    Add `HttpClientModule` to `app.module.ts` to ensure API requests work.
+
+    **`my-app-angular/src/app/app.module.ts`:**
+    ```typescript
+    import { BrowserModule } from '@angular/platform-browser';
+    import { NgModule } from '@angular/core';
+    import { HttpClientModule } from '@angular/common/http';
+    import { AppComponent } from './app.component';
+
+    @NgModule({
+      declarations: [
+        AppComponent
+      ],
+      imports: [
+        BrowserModule,
+        HttpClientModule
+      ],
+      providers: [],
+      bootstrap: [AppComponent]
+    })
+    export class AppModule { }
+    ```
+
+## 4. Testing and Verification
+
+### Testing Static Resource Access
+
+- **Verify Static Files in ASP.NET Core:**
+
+    Access static files from the backend, e.g., `https://localhost:5001/shared/css/styles.css`, to ensure the resources are served correctly.
+
+- **Verify Static Files in Client-Side Projects:**
+
+    Check the network tab in browser developer tools to ensure that static files are fetched correctly from the ASP.NET Core backend.
+
+### Example Directory Structures
+
+- **ASP.NET Core Project:**
+    ```
+    /src
+      /MyApp.Api
+        /wwwroot
+          /css
+            /styles.css
+          /js
+            /scripts.js
+          /fonts
+            /my-font.ttf
+          /images
+            /logo.png
+          /index.html
+    ```
+
+- **Client-Side Projects:**
+    - **React:** `public/index.html`
+    - **Vue:** `public/index.html`
+    - **Angular:** `src/index.html`
 
 **Copyright © 2024 - All Rights Reserved by Jason Silvestri**
